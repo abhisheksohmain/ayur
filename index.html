@@ -115,7 +115,7 @@
   <div class="wrap">
     <h2>Order in 3 easy steps</h2>
     <div class="step-grid">
-      <div class="step rv"><b>1</b><h3>Fill the form</h3><p>Naam, mobile number aur address bharein.</p></div>
+      <div class="step rv"><b>1</b><h3>Fill the form</h3><p>Naam, mobile number, address aur pincode bharein.</p></div>
       <div class="step rv"><b>2</b><h3>Confirm your order</h3><p>Hamari team aapse contact karegi.</p></div>
       <div class="step rv"><b>3</b><h3>Get your kit</h3><p>Combo kit aapke address par pahunchega.</p></div>
     </div>
@@ -133,9 +133,10 @@
       </div>
       <form id="form" novalidate>
         <h2>Book your kit</h2>
-        <div><label for="name">Full name</label><input id="name" required autocomplete="name"></div>
-        <div><label for="phone">Mobile number</label><input id="phone" type="tel" inputmode="numeric" maxlength="10" required autocomplete="tel"></div>
-        <div><label for="addr">Full address and pincode</label><textarea id="addr" rows="3" required autocomplete="street-address"></textarea></div>
+        <div><label for="name">Full name</label><input id="name" name="name" required autocomplete="name"></div>
+        <div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="10" required autocomplete="tel"></div>
+        <div><label for="addr">Full address (house no., area, city, state)</label><textarea id="addr" name="address" rows="3" required autocomplete="street-address"></textarea></div>
+        <div><label for="pin">Pincode</label><input id="pin" name="pincode" type="tel" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="6-digit pincode" required autocomplete="postal-code"></div>
         <button class="btn" type="submit">Confirm order</button>
         <p class="msg" id="msg" role="status"></p>
       </form>
